@@ -351,7 +351,7 @@ INF.03. Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz ba
 {activeProject === "Document" && (
   <div>
     <h1 className="heading">Dokument do rekrutacji</h1>
-    <div style={{overflowY: "auto", height: "240px"}}>
+    <div>
     <p>
     4. Używałem tylko ChataGpt w wersji darmowej do: <br/>
     - analizowania errorow (dobrze sobie radzi z typowami błędami niezwiązanymi z dużą logiką), <br/>
@@ -398,7 +398,9 @@ INF.03. Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz ba
 
       <footer className="footer flex justify-between">
         <p>Copyright © 2025 Wojciech Cieciura</p>
-        <a className="link" href="#">
+        <a className="link"  target="_blank"
+         href="https://github.com/wojciechc1/my-portfolio-website"
+           rel="noopener noreferrer">
           source code
         </a>
       </footer>
