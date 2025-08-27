@@ -113,11 +113,10 @@ function Scene({ goToObject, onReachTarget, is2DActive}: { goToObject: boolean, 
   const camera = useThree((state) => state.camera);
   const target = new THREE.Vector3(0, 4, 0); // pozycja monitora
   const speed = 1.5;
-  const initialPosition = useRef(camera.position.clone());
 
   const cameraRef = useRef<THREE.PerspectiveCamera>(null);
 
-   useFrame((state, delta) => {
+   useFrame((_state, delta) => {
     if (goToObject && !is2DActive) {
       camera.position.lerp(target, delta * speed);
       camera.lookAt(target);

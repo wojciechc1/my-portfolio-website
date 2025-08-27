@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./static-page.css";
 
 export default function StaticPage({ onClose }: { onClose?: () => void }) {
-
+  onClose = onClose
   const [activeProject, setActiveProject] = useState<string | null>(null);
 
   return (
