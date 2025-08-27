@@ -1,3 +1,30 @@
+# My Road – Personal Portfolio
+
+**Description:**  
+This is a personal portfolio website built with **React** and **Three.js**. It showcases my projects, certifications, and contact information in an interactive 3D/2D environment. Users can navigate a 3D scene to focus on a “monitor” object and then view a full 2D portfolio page.
+
+**Features:**  
+- Interactive 3D scene with camera animation using **Three.js** and **react-three-fiber**.  
+- Smooth transition between 3D scene and 2D portfolio page.  
+- Dynamic content sections: About, Projects, GitHub, Contact, and Certificates.  
+- Fully responsive design using CSS and flexbox.  
+- Projects section with clickable links to GitHub repositories.  
+- Certificates section with links to verified course completions.  
+- Contact section with email and LinkedIn information.  
+
+**Tech Stack:**  
+- React + TypeScript  
+- Three.js + react-three-fiber  
+- CSS 
+
+**Live Demo:**  
+....
+
+**License:**  
+MIT
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
