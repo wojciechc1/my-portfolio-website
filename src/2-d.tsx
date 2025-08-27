@@ -119,6 +119,11 @@ export default function StaticPage({ onClose }: { onClose?: () => void }) {
                 Contact
               </a>
             </li>
+            <li>
+              <a className="link" href="#" onClick={(e) => { e.preventDefault(); setActiveProject("Document"); }}>
+                Document
+              </a>
+            </li>
           </ul>
         </nav>
 
@@ -342,13 +347,57 @@ INF.03. Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz ba
     </ul>
   </div>
 )}
+
+{activeProject === "Document" && (
+  <div>
+    <h1 className="heading">Dokument do rekrutacji</h1>
+    <div style={{overflowY: "auto", height: "240px"}}>
+    <p>
+    4. Używałem tylko ChataGpt w wersji darmowej do: <br/>
+    - analizowania errorow (dobrze sobie radzi z typowami błędami niezwiązanymi z dużą logiką), <br/>
+    - generowania kodu mniejszych komponentow strony (nie lubie tworzenia frontendu i słabo znam reacta) <br/>
+    - sugestii co do efektywności moich rozwiązań/ wymyślania nowych<br/>
+    - zmieniania/ debugowania/ tworzenia podobnych - komponentow <br/>
+    Wybralem akurat to narzędzie, ponieważ jest najszybsze i najlepsze z tych, które znam. Propty tworzyłem na szybko z jedną zasadą- aby było spójnie i logicznie
+    <br/>
+    5. GPT najlepiej sprawdził się do ww. czynności. A z tymi miał problem:<br/>
+    - generowanie widoku (ma problem już z małymi komponentami, react/css)<br/>
+    - generowanie większego kodu<br/>
+    - odnajowywanie się w całym projekcie<br/> 
+    <br/>
+    6. Q&A<br/>
+    a) pos. absolute- pozycja względem elementu z atrybutem pos. relative. fixed- pozycja która nie zmienai się z przesuwaniem okna<br/>
+     nie wiem<br/>
+     display: flex; justify-content: center; align-items: center; position absolute; top calc(50%-height/2), left calc(50%-width/2); lub margin auto<br/>
+    b) GET - pobieranie danych z api / POST - wysyłanie <br/>
+    format danych js, prosty i zapewne szybki<br/>
+    najpierw bym się dowiedzial co to za błąd - 403: forbidden - upewniłbym się czy nie jest potrzebny klucz dostępu<br/>
+    c) Nie korzystalem. Wydaje mi się że do organizacji pracy.<br/>
+    systemy się porozumiewają - spamią informacjami do siebe o wysłaniu/odbiorze zapytania/informacji <br/>
+    zapewne są gotowe narzędzia/ już napisane programy które można dostosować do klienta. A jeśli trzebaby było od zera to kombinowałbym z drukowaniem stron- zapis do pdfa<br/>
+    d) system prompt- konfiguracja czatu, prompt- zapytanie zwykle<br/>
+    Api key to hasło do api, należy chronić aby nikt nie narobił szkód w systemie/ nie obciążał/ nie dostał informacji<br/>
+    Agent AI- agent w RL, MCP- "kora czołowa", system decyzji<br/>
+    e) sprawdzilbym kompletność kodu, poprawność wersje przeglądarki <br/>
+    nie mam pojęcia, nie miałem z tym do czyniena. zapytałbym czata lub poszukałbym informacji jak połączyć coś z google sheets<br/>
+    powiedziałbym że muszę sprawdić informacje w systemie - jeśli nadal nie miałbym pewności- powiedziałbym to <br/>
+    f) Działania produktu do odpowiadania na pytania klientów ;) <br/>
+    chatGPT/ filmy na Youtube/ renomowane kursy
+    g) motywuje mnie ciekawość, stworzenie rozwiązania <br/>
+      rozwinę umiejętności rozumienia/ tworzenia AI/ML oraz chciałbym mieć możliwość wykorzystywania tego
+
+
+    </p>
+    </div>
+  </div>
+)}
         </div>
      
         
       </div>
 
       <footer className="footer flex justify-between">
-        <p>Copyright © 2025 Wojtek</p>
+        <p>Copyright © 2025 Wojciech Cieciura</p>
         <a className="link" href="#">
           source code
         </a>
