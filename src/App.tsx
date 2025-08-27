@@ -108,6 +108,50 @@ function Pillars() {
 
 
 import {useThree } from "@react-three/fiber";
+import { useGLTF } from '@react-three/drei'
+import { useEffect } from 'react'
+
+
+
+function RetroPC() {
+  const { scene } = useGLTF('/pc.glb')
+  useEffect(() => {
+    scene.traverse((child) => {
+      if ((child as THREE.Mesh).isMesh) {
+        child.castShadow = true
+        child.receiveShadow = true
+      }
+    })
+  }, [scene])
+  return <primitive object={scene} scale={2.5} position={[0, 3.1, 0]} />
+}
+
+function Desk() {
+  const { scene } = useGLTF('/desk.glb')
+  useEffect(() => {
+    scene.traverse((child) => {
+      if ((child as THREE.Mesh).isMesh) {
+        child.castShadow = true
+        child.receiveShadow = true
+      }
+    })
+  }, [scene])
+  return <primitive object={scene} scale={4} position={[-.2, 0, .5]} />
+}
+
+
+function Van() {
+  const { scene } = useGLTF('/van.glb')
+  useEffect(() => {
+    scene.traverse((child) => {
+      if ((child as THREE.Mesh).isMesh) {
+        child.castShadow = true
+        child.receiveShadow = true
+      }
+    })
+  }, [scene])
+  return <primitive object={scene} scale={240} position={[-23, 4.8, -5]}  rotation={[0, .8, 0]} />
+}
 
 function Scene({ goToObject, onReachTarget, is2DActive}: { goToObject: boolean, onReachTarget: () => void, is2DActive: boolean}) {
   const camera = useThree((state) => state.camera);
@@ -165,24 +209,22 @@ function Scene({ goToObject, onReachTarget, is2DActive}: { goToObject: boolean, 
   />
 </mesh>
 
+ <mesh
+  rotation={[Math.PI / 2, 0, 0]}
+  position={[0, 16, 0]}
+>
+  <planeGeometry args={[40, 40]} />
+  <meshPhysicalMaterial
+    color="#e0f1ff"        // kolor podłogi
+     emissive="#e0f8ff"     // podświetlenie podłogi
+    emissiveIntensity={0.3} // moc emisji
+  />
+</mesh>
 
   
-
-      <mesh position={[0, 4, 0]}>
-        <boxGeometry args={[2, 2, 0.05]} />
-        <meshPhysicalMaterial
-          color="lightblue"
-          transparent
-          opacity={0.2}
-          metalness={0.1}
-          roughness={0}
-          clearcoat={1}
-          clearcoatRoughness={0.1}
-          emissive={new THREE.Color("lightblue")} // kolor świecenia
-          emissiveIntensity={0.5}                 // moc świecenia (0-1 lub więcej)
-        />
-      </mesh>
-
+      <RetroPC/>
+      <Desk/>
+      <Van/>
       <Pillars />
       <CeilingWithHole />
 
