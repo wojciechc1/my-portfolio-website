@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="static-page.css">
+</head>
+<body>
+<div id="app">
+ 
+  <header class="header flex gap-2">
+    <a href="/"><img class="logo" src="logo.png" alt="logo"></a>
+    <div>
+      <h1 class="title">My Road</h1>
+      <h3 class="subtitle">personal showcase</h3>
+    </div>
+
+    <div class="menu flex-col gap-2 flex-1">
+      <div class="menu-top flex items-center border-bottom">
+        <a class="menu-item disabled">messages <b>0</b></a>
+        <div class="divider"></div>
+        <a class="menu-item disabled">projects <b>0</b></a>
+        <div class="divider"></div>
+        <a class="menu-item disabled">account <b>B0.0000</b></a>
+
+        <div class="user-info flex-col items-end ml-auto">
+          <p class="text-small">welcome to</p>
+          <p class="text-bold">my portfolio</p>
+        </div>
+
+        <img class="avatar" src="avatar.png" alt="icon">
+      </div>
+
+      <div class="menu-bottom flex items-center">
+        <label class="search-label">Search</label>
+        <input class="search-input" placeholder="Search..." disabled>
+        <input class="search-button" type="button" value="Go" disabled>
+
+        <div class="user-actions flex-col items-end ml-auto">
+          <p class="text-xl">Hi, <b>Guest</b></p>
+          <div class="actions flex">
+            <a class="link disabled">settings</a>
+            <span class="separator">-</span>
+            <a class="link disabled">logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main flex flex-1">
+    <nav class="sidebar">
+      <ul>
+        <li><a class="link" href="/">About</a></li>
+        <li>
+          <a class="link" href="/projects">Projects</a>
+          <span class="count">4</span>
+          <ul class="sublist">
+            <li><a class="link" href="#">Project 1</a></li>
+            <li><a class="link" href="#">Project 2</a></li>
+            <li><a class="link" href="#">Project 3</a></li>
+            <li><a class="link" href="#">Project 4</a></li>
+          </ul>
+        </li>
+        <li><a class="link" href="#">GitHub</a></li>
+        <li><a class="link" href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <h1 class="heading">hello,</h1>
+      <p>
+        I'm Wojtek, Im student and it cos tam chuj <br> Here I showcase my projects and digital explorations
+        <a class="link-bold" href="#">Learn more</a>
+      </p>
+      <br>
+      <p>
+        To get in touch, visit the
+        <a class="link-bold" href="/contact">contact page</a>
+        or send me an e-mail at
+        <a class="link-bold" href="mailto:example@example.com">example@example.com</a>
+      </p>
+    </div>
+  </div>
+
+  <footer class="footer flex justify-between">
+    <p>Copyright © 2025 Wojtek</p>
+    <a class="link" href="#">source code</a>
+  </footer>
+</div>
+</body>
+
+</html>
