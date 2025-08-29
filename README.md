@@ -17,13 +17,6 @@ This is a personal portfolio website built with **React** and **Three.js**. It s
 - Three.js + react-three-fiber  
 - CSS 
 
-**Live Demo:**  
-....
-
-**License:**  
-MIT
-
-
 
 # React + TypeScript + Vite
 
