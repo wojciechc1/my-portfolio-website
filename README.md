@@ -3,6 +3,11 @@
 **Description:**  
 This is a personal portfolio website built with **React** and **Three.js**. It showcases my projects, certifications, and contact information in an interactive 3D/2D environment. Users can navigate a 3D scene to focus on a “monitor” object and then view a full 2D portfolio page.
 
+
+<p>
+  <img src="record1.gif" alt="preview_gif" width="300"/>
+</p>
+
 **Features:**  
 - Interactive 3D scene with camera animation using **Three.js** and **react-three-fiber**.  
 - Smooth transition between 3D scene and 2D portfolio page.  
